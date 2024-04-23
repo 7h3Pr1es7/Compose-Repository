@@ -2,7 +2,8 @@ Docker Compose Files
 
 Dockge
 
-IRIS
+DFIR-IRIS
+https://github.com/dfir-iris/iris-web
 
 Portainer
 
