@@ -1,12 +1,18 @@
 Docker Compose Files
 
-Splunk
+Dockge
 
-TheHive
+IRIS
 
 Portainer
 
+Splunk
 
+MISP
+https://www.misp-project.org/download/
+https://github.com/misp/misp-docker
+
+TheHive
 
 Wazuh
 https://github.com/wazuh/wazuh-docker
