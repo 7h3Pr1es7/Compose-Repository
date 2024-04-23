@@ -1,0 +1,10 @@
+version: '3'
+services:
+  splunk:
+    image: splunk/splunk:latest
+    ports:
+      - "8000:8000"
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=admin@123 # Password requirements should be followed
+    command: start
