@@ -4,6 +4,7 @@ Dockge
 
 DFIR-IRIS
 https://github.com/dfir-iris/iris-web
+https://docs.dfir-iris.org/getting_started/
 
 Portainer
 
