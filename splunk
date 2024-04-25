@@ -8,5 +8,5 @@ services:
       - "8000:8000"
     environment:
       - SPLUNK_START_ARGS=--accept-license
-      - SPLUNK_PASSWORD=admin@123 # Password requirements should be followed
+      - SPLUNK_PASSWORD=admin@123 # 8 Char Password required
     command: start
