@@ -19,7 +19,20 @@ Splunk is a platform for searching, monitoring, and analyzing machine-generated 
 
 ## Velociraptor
 
-
+## Guacamole
+```yaml
+version: '3.6'
+services:
+  guacamole:
+    image: unsafetypin/guacamole
+    environment:
+    - EXTENSIONS=auth-totp
+    volumes:
+    - ./config:/config
+    ports:
+    - "8080:8080"
+    restart: always
+```
 ## MISP
 
 **Download:** [MISP Download Page](https://www.misp-project.org/download/)  
