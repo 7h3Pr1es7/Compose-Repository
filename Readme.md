@@ -13,8 +13,21 @@ Portainer is a lightweight management UI which allows you to easily manage your 
 
 ## Splunk
 
-Splunk is a platform for searching, monitoring, and analyzing machine-generated big data, via a web-style interface.
-
+Original Splunk Docker Image
+```yaml
+# Custom Compose File
+version: '3'
+services:
+  splunk:
+    image: splunk/splunk:latest
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - SPLUNK_START_ARGS=--accept-license
+      - SPLUNK_PASSWORD=admin@123 # 8 Char Password required
+    command: start
+```
 ## ELK
 
 ## Velociraptor
