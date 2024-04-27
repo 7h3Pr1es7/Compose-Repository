@@ -29,7 +29,8 @@ services:
       - /opt/stacks:/opt/stacks
     environment:
       # Tell Dockge where is your stacks directory
-      - DOCKGE_STACKS_DIR=/opt/stacks```
+      - DOCKGE_STACKS_DIR=/opt/stacks
+```
 ## Portainer
 
 Portainer is a lightweight management UI which allows you to easily manage your Docker host or Swarm cluster.
