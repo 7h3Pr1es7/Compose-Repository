@@ -95,7 +95,15 @@ services:
 ## ELK
 
 ## Velociraptor
+```shell
+git clone https://github.com/weslambert/velociraptor-docker
+cd velociraptor-docker
 
+#Change credential values in .env as desired
+
+docker-compose up -d
+#Access the Velociraptor GUI via https://<hostip>:8889
+```
 ## Guacamole
 ```yaml
 version: '3.6'
