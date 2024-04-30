@@ -21,7 +21,9 @@ docker build . --build-arg WIN_BUILD=true -t caldera:latest
 
 # Run the image. Change port forwarding configuration as desired.
 docker run -p 8888:8888 caldera:latest
-```## Dockge
+```
+
+## Dockge
 ```yaml
 version: "3.8"
 services:
