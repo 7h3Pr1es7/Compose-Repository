@@ -242,4 +242,19 @@ TheHive is a scalable  and open source Security Incident Response Platform, tigh
 **Documentation:** [Wazuh Docker Deployment](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html)
 
 Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
+## BloodHound
+https://support.bloodhoundenterprise.io/hc/en-us/articles/17468450058267-Install-BloodHound-Community-Edition-with-Docker-Compose
+```shell
+curl -L https://ghst.ly/getbhce | docker compose -f - up
 
+#Download and store docker-compose.yml in the directory from which you would like to run BloodHound CE.
+#Open a terminal interface, and from the directory you selected run docker-compose up
+#To run BloodHound CE without the need to maintain the terminal interface, use docker-compose up -d, and then docker-compose logs to see the most recent logs from the environment.
+#Docker Compose will download the required container images and initialize them. The logs will display the randomized default password to log into your new BloodHound CE environment.
+#Copy this password and open a web browser to http://localhost:8080.
+#Log in with the default username admin and the password from the logs.
+#The password cannot be regenerated. If you lost the password, simply run docker compose down -v and then docker compose up to reset your databases.
+#You will be required to change the password, thereafter you're logged into BloodHound CE!
+
+#https://github.com/SpecterOps/BloodHound/blob/main/examples/docker-compose/docker-compose.yml
+```
