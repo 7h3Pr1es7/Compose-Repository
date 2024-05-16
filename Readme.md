@@ -254,7 +254,7 @@ Wazuh is a free, open source and enterprise-ready security monitoring solution f
 #single node setup
 git clone https://github.com/wazuh/wazuh-docker.git -b v4.7.4
 
-docker-compose -f generate-indexer-certs.yml run --rm generator
+cd wazuh-docker
 docker-compose up -d
 ```
 ```yaml
