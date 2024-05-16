@@ -249,6 +249,28 @@ TheHive is a scalable  and open source Security Incident Response Platform, tigh
 **Documentation:** [Wazuh Docker Deployment](https://documentation.wazuh.com/current/deployment-options/docker/wazuh-container.html)
 
 Wazuh is a free, open source and enterprise-ready security monitoring solution for threat detection, integrity monitoring, incident response and compliance.
+
+```bash
+#single node setup
+git clone https://github.com/wazuh/wazuh-docker.git -b v4.7.4
+
+docker-compose -f generate-indexer-certs.yml run --rm generator
+docker-compose up -d
+```
+```yaml
+# Wazuh App Copyright (C) 2021 Wazuh Inc. (License GPLv2)
+version: '3'
+
+services:
+  generator:
+    image: wazuh/wazuh-certs-generator:0.0.1
+    hostname: wazuh-certs-generator
+    volumes:
+      - ./config/wazuh_indexer_ssl_certs/:/certificates/
+      - ./config/certs.yml:/config/certs.yml
+    environment:
+      - HTTP_PROXY=YOUR_PROXY_ADDRESS_OR_DNS
+```
 ## BloodHound
 https://support.bloodhoundenterprise.io/hc/en-us/articles/17468450058267-Install-BloodHound-Community-Edition-with-Docker-Compose
 ```shell
