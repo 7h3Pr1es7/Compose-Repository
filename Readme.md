@@ -111,6 +111,7 @@ services:
 ```
 ## ELK
 ```bash
+#copy line by line
 git clone https://github.com/deviantony/docker-elk.git
 cd docker-elk/
 sudo docker-compose up setup
