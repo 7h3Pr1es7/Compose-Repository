@@ -115,6 +115,7 @@ services:
 dpkg -i splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb
 /opt/splunkforwarder/bin/splunk start --accept-license
 /opt/splunkforwarder/bin/splunk enable boot-start -systemd-managed 0
+sudo /opt/splunkforwarder/bin/splunk add forward-server 192.168.1.88:9997 -auth admin:admin@123
 ```
 ## ELK
 ```bash
