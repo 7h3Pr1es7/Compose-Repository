@@ -103,11 +103,18 @@ services:
     image: splunk/splunk:latest
     restart: always
     ports:
-      - "8000:8000"
+      - "8000:8000" #Web Console
+      - "9997:9997" #Receiver for Universal forwarder
     environment:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=admin@123 # 8 Char Password required
     command: start
+```
+## Splunk Debian Agent
+```bash
+dpkg -i splunkforwarder-8.2.3-cd0848707637-linux-2.6-amd64.deb
+/opt/splunkforwarder/bin/splunk start --accept-license
+/opt/splunkforwarder/bin/splunk enable boot-start -systemd-managed 0
 ```
 ## ELK
 ```bash
