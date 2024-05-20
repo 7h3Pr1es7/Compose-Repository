@@ -110,6 +110,7 @@ services:
     ports:
       - "8000:8000" #Web Console
       - "9997:9997" #Receiver for Universal forwarder
+      - "8089:8089" #Splunk Server for configuring Forwarder Agents
     environment:
       - SPLUNK_START_ARGS=--accept-license
       - SPLUNK_PASSWORD=admin@123 # 8 Char Password required
