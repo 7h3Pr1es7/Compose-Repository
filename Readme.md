@@ -22,7 +22,12 @@ docker build . --build-arg WIN_BUILD=true -t caldera:latest
 # Run the image. Change port forwarding configuration as desired.
 docker run -p 8888:8888 caldera:latest
 ```
-
+## Shuffle SOAR
+```bash
+git clone https://github.com/shuffle/Shuffle
+cd Shuffle
+docker-compose up -d
+```
 ## Dockge
 ```yaml
 version: "3.8"
